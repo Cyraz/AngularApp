@@ -35,6 +35,31 @@ angular.module('angularAppApp')
           });
         }, //login
 
+        logout: function () {
+          return auth.$unauth();
+        },// logout
+
+        islogin: function () {
+         if(currentUser){
+           if(currentUser === ''){
+             return false;
+           }else{
+             return true;
+           }
+         }else{
+           return false;
+         }
+        },
+
+        getUserData: function () {
+          return currentUser;
+        },
+        getContext: function () {
+          $rootScope.Context=[{
+            info: 'Context Init',
+            meta: 'Object Reference'
+          }];
+        },
         register: function(user) {
           auth.$createUser({
             email: user.email,

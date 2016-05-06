@@ -42,6 +42,10 @@ angular
       templateUrl: 'views/success.html',
       controller: 'SuccessController'
     }).
+    when('/dashboard/:data', {
+      templateUrl: '/views/dashboard.html',
+      controller: 'dashboardCtr'
+    }).
     otherwise({
       redirectTo: '/login'
     });
