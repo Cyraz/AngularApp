@@ -17,8 +17,9 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
-  ])
+    'ngTouch',
+    'firebase'
+  ]).constant('FIREBASE_URL','https://code-beast.firebaseio.com/')
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {

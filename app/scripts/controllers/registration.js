@@ -9,10 +9,17 @@
  * Controller for handling login and register events!
  */
 angular.module('angularAppApp')
-  .controller('RegistrationController', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  }); 
+  .controller('RegistrationController',['$scope','Authentication',
+    function($scope, Authentication) {
+
+
+      $scope.login = function() {
+       Authentication.login($scope.user);
+      }; //login
+
+      $scope.register = function() {
+
+        Authentication.register($scope.user);
+      }; // register
+
+    }]); // Controller

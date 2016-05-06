@@ -11,6 +11,7 @@
 angular.module('angularAppApp')
   .controller('SuccessController', ['$scope', function($scope) {
     $scope.message = "Success!!!";
+    $scope.extra="\n Rock n Roll Baby!!!";
   }]);
 
 
