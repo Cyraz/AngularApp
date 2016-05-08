@@ -5,7 +5,7 @@
  * @name angularAppApp.controller:AboutCtrl
  * @description
  * # AboutCtrl
- * Controller of the angularAppApp
+ * Controller of the angularAppApp code
  */
 angular.module('angularAppApp')
   .controller('AboutCtrl', function ($scope) {

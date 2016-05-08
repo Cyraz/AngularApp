@@ -20,8 +20,8 @@ angular
     'ngTouch',
     'firebase'
   ])
-  .constant('FIREBASE_URL_OLD','https://code-beast.firebaseio.com/')
-  .constant('FIREBASE_URL','https://cbangular.firebaseio.com/')
+  .constant('FIREBASE_URL','https://code-beast.firebaseio.com/')
+  .constant('FIREBASE_URL_OLD','https://cbangular.firebaseio.com/')
 
   .run(['$rootScope', '$location',
     function($rootScope, $location) {
