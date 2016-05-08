@@ -19,7 +19,21 @@ angular
     'ngSanitize',
     'ngTouch',
     'firebase'
-  ]).constant('FIREBASE_URL','https://code-beast.firebaseio.com/')
+  ])
+  .constant('FIREBASE_URL_OLD','https://code-beast.firebaseio.com/')
+  .constant('FIREBASE_URL','https://cbangular.firebaseio.com/')
+
+  .run(['$rootScope', '$location',
+    function($rootScope, $location) {
+      $rootScope.$on('$routeChangeError',
+        function(event, next, previous, error) {
+          if (error=='AUTH_REQUIRED') {
+            $rootScope.message = 'Sorry, you must log in to access that page';
+            $location.path('/login');
+          } // AUTH REQUIRED
+        }); //event info
+    }]) //run
+
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
@@ -40,9 +54,14 @@ angular
     }).
     when('/success', {
       templateUrl: 'views/success.html',
-      controller: 'SuccessController'
+      controller: 'SuccessController',
+      resolve: {
+        currentAuth: function(Authentication) {
+          return Authentication.requireAuth();
+        } //current Auth
+      } //resolve
     }).
-    when('/dashboard/:data', {
+    when('/dashboard', {
       templateUrl: '/views/dashboard.html',
       controller: 'dashboardCtr'
     }).

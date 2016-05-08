@@ -7,11 +7,12 @@ angular.module('angularAppApp')
   .controller('dashboardCtr',['$scope','Authentication',
     function($scope, Authentication) {
 
-
-      $scope.isLogin=Authentication.islogin();
-      if(isLogin){
-        $scope.user=Authentication.getUserData().firstname;
-      }
+      alert("this is dashboard{{Authentication.message}}"+Authentication.message);
+      // $scope.isLogin=Authentication.islogin();
+      // if(isLogin){
+      //   var uservar=Authentication.getUserData();
+      //   $scope.user=uservar.firstname;
+      // }
 
 
 

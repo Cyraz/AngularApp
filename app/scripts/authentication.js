@@ -17,6 +17,13 @@ angular.module('angularAppApp')
           var userRef = new Firebase(FIREBASE_URL + 'users/' + authUser.uid );
           var userObj = $firebaseObject(userRef);
           $rootScope.currentUser = userObj;
+          // var regRef = new Firebase(FIREBASE_URL + 'LoginHistory')
+          //   .child(authUser.uid).set({
+          //     date: Firebase.ServerValue.TIMESTAMP,
+          //     login:"New login found",
+          //
+          //   }); //user info
+          console.log("onAuth detected! ********"+userObj);
         } else {
           $rootScope.currentUser = '';
         }
@@ -35,31 +42,14 @@ angular.module('angularAppApp')
           });
         }, //login
 
-        logout: function () {
+        logout: function() {
           return auth.$unauth();
-        },// logout
+        }, //logout
 
-        islogin: function () {
-         if(currentUser){
-           if(currentUser === ''){
-             return false;
-           }else{
-             return true;
-           }
-         }else{
-           return false;
-         }
-        },
+        requireAuth: function() {
+          return auth.$requireAuth();
+        }, //require Authentication
 
-        getUserData: function () {
-          return currentUser;
-        },
-        getContext: function () {
-          $rootScope.Context=[{
-            info: 'Context Init',
-            meta: 'Object Reference'
-          }];
-        },
         register: function(user) {
           auth.$createUser({
             email: user.email,
