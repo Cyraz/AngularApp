@@ -3,4 +3,6 @@
     <li><a ng-hide="currentUser" href="#/login">Login</a></li>
     <li><a ng-hide="currentUser" href="#/register">Register</a></li>
     <li><a ng-show="currentUser" href="#/dashboard">Dashboard</a></li>
+    <li><a ng-show="currentUser" href="#/login" ng-click="logout()" ng-controller="RegistrationController">logout</a></li>
+
   </ul>

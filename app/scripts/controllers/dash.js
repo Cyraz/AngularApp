@@ -4,8 +4,8 @@
 
 
 angular.module('angularAppApp')
-  .controller('dashboardCtr',['$scope','Authentication',
-    function($scope, Authentication) {
+  .controller('dashboardCtr',['$scope','$rootScope','Authentication',
+    function($scope,$rootScope, Authentication) {
 
       alert("this is dashboard{{Authentication.message}}"+Authentication.message);
       // $scope.isLogin=Authentication.islogin();
