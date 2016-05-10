@@ -1247,7 +1247,12 @@
       <workItem from="1462524591336" duration="595000" />
       <workItem from="1462647636620" duration="13246000" />
       <workItem from="1462735185278" duration="16682000" />
+<<<<<<< Updated upstream
       <workItem from="1462859020257" duration="1780000" />
+=======
+      <workItem from="1462859020257" duration="4609000" />
+      <workItem from="1462891392085" duration="5662000" />
+>>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="Without main css">
       <created>1462479793695</created>
@@ -1312,11 +1317,33 @@
       <option name="project" value="LOCAL" />
       <updated>1462737708345</updated>
     </task>
+<<<<<<< Updated upstream
     <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="67240000" />
+=======
+    <task id="LOCAL-00010" summary="Bug fix: Dashboard authorisation">
+      <created>1462871493269</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1462871493270</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Bug fix: Dashboard authorisation">
+      <created>1462922235785</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1462922235785</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="75731000" />
+>>>>>>> Stashed changes
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
